@@ -1,0 +1,31 @@
+body {
+    font-family: 'Open Sans', Roboto,  sans-serif;
+    font-size: .95rem;
+    font-weight: 400;
+    // color: #3a3a3a;
+    background: #f8f8f8;
+}
+
+.topic-list-item:hover {
+    background-color: #1ea1851f;
+}
+
+.tab.active {
+    background-color: #1ea185;
+}
+
+.discourse-no-touch .d-header-icons .icon:hover {
+    background-color: initial;
+}
+
+.drop-down-mode .d-header-icons .active .icon, .discourse-no-touch .d-header-icons .icon:focus {
+    background-color: var(--secondary);
+}
+
+.drop-down-mode .d-header-icons .active .d-icon, .discourse-no-touch .d-header-icons .icon:focus .d-icon {
+    fill: var(--primary-medium);
+}
+
+.d-header-icons .d-icon {
+    fill:  var(--secondary);
+}
