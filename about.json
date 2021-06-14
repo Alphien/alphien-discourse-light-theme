@@ -1,7 +1,7 @@
 {
   "name": "Alphien Light Theme",
   "component": false,
-  "license_url": null,
+  "license_url": "https://github.com/Alphien/discourse-light-theme/blob/main/LICENSE",
   "about_url": "https://alphien.com",
   "authors": "Don Alfons Nisnoni",
   "theme_version": null,
