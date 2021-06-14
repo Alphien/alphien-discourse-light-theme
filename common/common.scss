@@ -10,7 +10,7 @@ body {
 }
 
 .tab.active {
-  background-color: #1ea185;
+  background-color: var(--header_background);
 }
 
 .discourse-no-touch .d-header-icons .icon:hover {
