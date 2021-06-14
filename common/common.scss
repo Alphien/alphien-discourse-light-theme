@@ -29,3 +29,7 @@ body {
 .d-header-icons .d-icon {
     fill:  var(--secondary);
 }
+
+div.menu-links-header button:hover, div.menu-links-header button:focus {
+    background-color: #e9e9e9;
+}
