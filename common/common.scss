@@ -39,3 +39,10 @@ div.menu-links-header button:focus {
 .link-top-line a {
   display: block;
 }
+
+@media screen and (min-width: 768px) {
+  .header-buttons .btn-primary {
+    font-size: 1em;
+    font-weight: 600;
+  }
+}
