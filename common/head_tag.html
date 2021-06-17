@@ -1,4 +1,17 @@
 <script defer src="https://beta-flower.alphien.com/hide-header.js"></script>
+
+<script type="text/discourse-plugin" version="0.8">
+  const dev = location.host === "dis.alphien.com";
+  api.decorateWidget("header-buttons:before", function (helper) {
+    return helper.h("a", {
+      text: "Dashboard",
+      title: "Alphien dashboard",
+      className: "btn-primary",
+      href: dev ? "https://alphadashboard.alphien.com" : "https://dashboard.alphien.com",
+    });
+  });
+</script>
+
 <!-- <script type="text/x-handlebars" data-template-name="application">
   {{#discourse-root}}
     {{d-document}}
