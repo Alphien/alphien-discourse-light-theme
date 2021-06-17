@@ -45,8 +45,8 @@
   {{/discourse-root}}
 </script>
 <script defer src="https://beta-flower.alphien.com/hide-header.js"></script>
-<script defer type="text/discourse-plugin" version="0.8">
-  $(document).ready(function () {
+<script defer>
+  window.addEventListener("load", function () {
     const headerButtons = document.querySelector(".header-buttons");
 
     if (!headerButtons) {
@@ -55,19 +55,13 @@
 
     const dev = location.host === "dis.alphien.com";
 
-    const linkToDashboard = document.createElement("a");
-    linkToDashboard.setAttribute("class", "widget-button btn btn-primary btn-small btn-text");
-    linkToDashboard.href = dev ? "https://alphadashboard.alphien.com" : "https://dashboard.alphien.com";
-    linkToDashboard.textContent = "Dashboard";
-    headerButtons.appendChild(linkToDashboard);
+    function genRedirectParam(url) {
+      const newURL = new URL(url);
+      newURL.searchParams.append("s", location.href);
+      return newURL;
+    }
 
-    if (headerButtons.childElementCount) {
-      function genRedirectParam(url) {
-        const newURL = new URL(url);
-        newURL.searchParams.append("s", location.href);
-        return newURL;
-      }
-
+    function updateDefaultSignUpButton(parent = document) {
       const defaultSignUpButton = headerButtons.querySelector(".sign-up-button");
       if (defaultSignUpButton) {
         const newSignUpButton = document.createElement("a");
@@ -77,8 +71,10 @@
         newSignUpButton.href = dev ? genRedirectParam("https://beta.alphien.com/register") : genRedirectParam("https://alphien.com/register");
         defaultSignUpButton.replaceWith(newSignUpButton);
       }
+    }
 
-      const defaultLoginButton = headerButtons.querySelector(".login-button");
+    function updateDefaultLoginButton(parent = document) {
+      const defaultLoginButton = parent.querySelector(".login-button");
       if (defaultLoginButton) {
         const newLoginButton = document.createElement("a");
         newLoginButton.setAttribute("class", defaultLoginButton.getAttribute("class"));
@@ -87,6 +83,27 @@
         newLoginButton.href = dev ? genRedirectParam("https://beta-auth.alphien.com") : genRedirectParam("https://auth.alphien.com");
         defaultLoginButton.replaceWith(newLoginButton);
       }
+    }
+
+    function replaceLoginLink() {
+      if (document.querySelector(".no-ember")) {
+        const pageNotFoundEl = document.querySelector(".page-not-found");
+        if (pageNotFoundEl) {
+          const loginLink = pageNotFoundEl.querySelector("a[href='/login']");
+          debugger;
+        }
+      }
+    }
+
+    const linkToDashboard = document.createElement("a");
+    linkToDashboard.setAttribute("class", "widget-button btn btn-primary btn-small btn-text");
+    linkToDashboard.href = dev ? "https://alphadashboard.alphien.com" : "https://dashboard.alphien.com";
+    linkToDashboard.textContent = "Dashboard";
+    headerButtons.appendChild(linkToDashboard);
+
+    if (headerButtons.childElementCount) {
+      updateDefaultLoginButton(headerButtons);
+      updateDefaultSignUpButton(headerButtons);
     }
   });
 </script>
