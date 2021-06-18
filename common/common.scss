@@ -40,9 +40,7 @@ div.menu-links-header button:focus {
   display: block;
 }
 
-@media screen and (min-width: 768px) {
-  .header-buttons .btn-primary {
-    font-size: 1em;
-    font-weight: 600;
-  }
+.header-buttons .btn-primary {
+  font-size: 1em !important;
+  font-weight: 600 !important;
 }
