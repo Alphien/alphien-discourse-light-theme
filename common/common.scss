@@ -17,10 +17,11 @@ button {
   background-color: var(--header_background);
 }
 
-.discourse-no-touch .d-header-icons .icon:hover {
-  background-color: initial;
+.discourse-no-touch .d-header-icons {
+  .icon:hover {
+    background-color: initial;
+  }
 }
-
 .drop-down-mode .d-header-icons .active .icon,
 .discourse-no-touch .d-header-icons .icon:focus {
   background-color: var(--secondary);
@@ -35,9 +36,11 @@ button {
   fill: var(--secondary);
 }
 
-div.menu-links-header button:hover,
-div.menu-links-header button:focus {
-  background-color: var(--primary-low);
+.menu-links-header {
+  button:hover,
+  button:focus {
+    background-color: var(--primary-low);
+  }
 }
 
 .link-top-line a {
