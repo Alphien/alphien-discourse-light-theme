@@ -214,6 +214,7 @@ body.blog {
 
   .blog-contents {
     display: flex;
+    justify-content: space-between;
     margin-top: 40px;
 
     .topic-container {
