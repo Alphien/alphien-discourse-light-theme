@@ -241,6 +241,10 @@ body.blog {
         margin-bottom: 30px;
         width: 48%;
 
+        &:hover {
+          background-color: unset !important;
+        }
+
         .contents {
           .topic-image {
             position: relative;
