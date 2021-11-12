@@ -229,11 +229,13 @@ body.blog {
       .topic-list {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
       }
 
       .topic-list-item {
         position: relative;
         margin-bottom: 30px;
+        width: 48%;
 
         .contents {
           .topic-image {
@@ -289,6 +291,16 @@ body.blog {
               display: flex;
               align-items: center;
               padding: 0;
+            }
+          }
+        }
+
+        &:first-child {
+          width: 100% !important;
+
+          .contents {
+            .topic-image {
+              height: 375px !important;
             }
           }
         }
