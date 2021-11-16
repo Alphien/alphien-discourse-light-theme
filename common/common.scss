@@ -441,8 +441,6 @@ body.blog {
                 text-decoration: none;
                 color: $tertiary;
                 transition: color 0.2s ease;
-                display: flex;
-                align-items: center;
 
                 &:hover {
                   color: dark-light-diff($tertiary, $secondary, -25%, -25%);
@@ -456,11 +454,12 @@ body.blog {
 
                 .tag-count {
                   background: $primary-high;
-                  padding: 2px 6px;
+                  padding: 1px 6px;
                   font-size: 12px;
                   line-height: 1;
                   color: $secondary;
                   border-radius: 4px;
+                  margin-left: 2px;
                 }
               }
             }
