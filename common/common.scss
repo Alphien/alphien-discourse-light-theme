@@ -288,19 +288,10 @@ body.blog {
             .topic-excerpt {
               margin-top: 0.7em;
               color: $primary-high;
-
-              p {
-                margin-bottom: 1em;
-                display: -webkit-box;
-                overflow-y: hidden;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-                word-break: break-word;
-                line-height: 17px;
-              }
+              line-height: 17px;
             }
             
-            .topic-meta, .topic-tags, .topic-excerpt {
+            .topic-meta, .topic-tags, .topic-excerpt, .readmore-link {
               font-family: Roboto, "Open Sans", sans-serif;
             }
 
@@ -355,6 +346,16 @@ body.blog {
                 &:hover {
                   color: dark-light-diff($tertiary, $secondary, -25%, -25%);
                 }
+              }
+            }
+
+            .readmore-link {
+              font-style: $tertiary;
+              margin-top: 0.7em;
+              font-weight: bold;
+
+              &:hover {
+                color: dark-light-diff($tertiary, $secondary, -25%, -25%);
               }
             }
 
