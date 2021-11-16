@@ -280,7 +280,7 @@ body.blog {
                 .topic-title {
                   font-size: 1.6rem;
                   margin: 0 0 0.4em;
-                  transition: color 0.2s ease-in-out;
+                  transition: color 0.2s ease;
                 }
               }
             }
@@ -357,7 +357,7 @@ body.blog {
             }
 
             a {
-              transition: color 0.2s ease-in-out;
+              transition: color 0.2s ease;
 
               &:hover {
                 color: $tertiary;
