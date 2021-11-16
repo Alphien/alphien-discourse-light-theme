@@ -570,10 +570,27 @@ body.blog-post {
                 border-radius: 50%;
               }
             }
+
+            .comment-user {
+              margin: 0.7em 0 0 0;
+              font-size: 1em;
+              font-weight: normal;
+            }
           }
 
           .date {
             color: $primary-high;
+          }
+        }
+
+        .comment-content {
+          &:first-of-type {
+            padding-top: 0;
+          }
+    
+          &:last-of-type {
+            border-bottom: none;
+            padding-bottom: 0;
           }
         }
       }
