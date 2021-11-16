@@ -349,6 +349,7 @@ body.blog {
 
               .tag-item {
                 color: $tertiary;
+                margin-right: 0.4em;
 
                 &:hover {
                   color: dark-light-diff($tertiary, $secondary, -25%, -25%);
