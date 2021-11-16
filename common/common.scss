@@ -298,6 +298,10 @@ body.blog {
                 word-break: break-word;
               }
             }
+            
+            .topic-meta, .topic-tags {
+              font-family: Roboto, "Open Sans", sans-serif;
+            }
 
             .topic-meta {
               display: flex;
@@ -319,14 +323,14 @@ body.blog {
             }
 
             .topic-tags {
-              margin-top: 1em;
+              margin-top: 0.6em;
               display: flex;
               align-items: center;
 
               .tag-icon {
                 color: $primary-high;
-                width: 0.95rem;
-                height: 0.95rem;
+                width: 18px;
+                height: 18px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -340,9 +344,9 @@ body.blog {
 
               .tag-item {
                 color: $tertiary;
-                
+
                 &:hover {
-                  color: $highlight;
+                  color: dark-light-diff($tertiary, $secondary, -25%, -25%);
                 }
               }
             }
