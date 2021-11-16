@@ -486,11 +486,11 @@ body.blog-post {
     max-height: 400px;
     justify-content: flex-end;
     align-items: center;
+    padding: 0 10px;
 
     .contents {
       width: 100%;
       max-width: 900px;
-      margin: 0 10px;
       box-sizing: border-box;
       border-top-left-radius: 12px;
       border-top-right-radius: 12px;
@@ -518,6 +518,7 @@ body.blog-post {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 10px;
   }
 
   li {
@@ -530,7 +531,6 @@ body.blog-post {
     align-items: center;
     width: 100%;
     max-width: 900px;
-    margin: 0 10px;
   }
 
   .comment-container {
