@@ -223,6 +223,10 @@ body.blog {
     .topic-container {
       width: 72%;
 
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
       .topic-list-title {
         font-size: 22px;
         line-height: 30px;
@@ -406,6 +410,46 @@ body.blog {
 
     .side-bar {
       width: 20%;
+      position: relative;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+
+      .sticky-content {
+        position: sticky;
+        top: 100px;
+
+        .tag-container {
+          .tag-title {
+            margin: 0 0 1em;
+          }
+
+          .tag-list {
+            margin: 0;
+            list-style: none;
+            padding: 0;
+
+            li {
+              margin-bottom: 6px;
+
+              a {
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 24px;
+                text-decoration: none;
+                color: $tertiary;
+                transition: color 0.2s ease;
+
+                &:hover {
+                  color: dark-light-diff($tertiary, $secondary, -25%, -25%);
+                }
+              }
+            }
+          }
+        }
+      }
+      
     }
   }
 }
