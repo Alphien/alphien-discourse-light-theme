@@ -286,7 +286,7 @@ body.blog {
             }
 
             .topic-excerpt {
-              margin-top: 0.7em;
+              margin: 0.7em 0;
               color: $primary-high;
               line-height: 17px;
             }
@@ -351,8 +351,6 @@ body.blog {
 
             .readmore-link {
               color: $tertiary;
-              font-weight: bold;
-              margin-top: 0.7em;
               font-weight: bold;
 
               &:hover {
