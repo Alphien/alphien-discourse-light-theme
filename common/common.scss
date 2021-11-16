@@ -286,7 +286,7 @@ body.blog {
             }
 
             .topic-excerpt {
-              max-width: 56em;
+              margin-top: 0.7em;
               color: $primary-high;
 
               p {
@@ -296,10 +296,11 @@ body.blog {
                 -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;
                 word-break: break-word;
+                line-height: 17px;
               }
             }
             
-            .topic-meta, .topic-tags {
+            .topic-meta, .topic-tags, .topic-excerpt {
               font-family: Roboto, "Open Sans", sans-serif;
             }
 
@@ -328,7 +329,7 @@ body.blog {
             }
 
             .topic-tags {
-              margin-top: 0.6em;
+              margin-top: 0.7em;
               display: flex;
               align-items: center;
 
