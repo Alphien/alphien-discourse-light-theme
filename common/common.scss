@@ -554,9 +554,14 @@ body.blog-post {
       .comment {
         word-wrap: break-word;
         word-break: break-word;
+        border-radius: 12px;
+        margin-bottom: 1.2em;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
 
         .comment-header {
-          margin-bottom: 1.2em;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -580,17 +585,6 @@ body.blog-post {
 
           .date {
             color: $primary-high;
-          }
-        }
-
-        .comment-content {
-          &:first-of-type {
-            padding-top: 0;
-          }
-    
-          &:last-of-type {
-            border-bottom: none;
-            padding-bottom: 0;
           }
         }
       }
