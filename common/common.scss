@@ -323,7 +323,10 @@ body.blog {
                 color: $primary-high;
                 width: 0.95rem;
                 height: 0.95rem;
-                margin-right: 6px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: .4em;
               }
             }
 
