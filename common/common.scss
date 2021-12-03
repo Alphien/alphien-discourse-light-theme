@@ -416,25 +416,31 @@ body.blog {
           margin-bottom: 20px;
 
           #blog-search {
-            display: flex;
-            justify-content: space-between;
             width: 100%;
+            position: relative;
 
             input {
-              padding: 8px;
               font-size: 1em;
               width: 100%;
-              border-top-left-radius: 5px;
-              border-bottom-left-radius: 5px;
+              border-radius: 5px;
               border: 1px solid #babfc4;
+              width: 100%;
+              box-sizing: border-box;
+              padding: 8px 40px 8px 8px;
 
               &:focus-visible {
                 outline-color: $tertiary;
+                outline-style: solid;
               }
 
             }
             
             button {
+              position: absolute;
+              padding: 1px 6px;
+              top: 0;
+              right: 0;
+              height: 100%;
               background: #efefef;
               border: none;
               cursor: pointer;
