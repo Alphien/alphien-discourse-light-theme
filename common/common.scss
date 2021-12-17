@@ -220,7 +220,7 @@ body.blog-post {
       margin-right: 0.4em;
 
       &:hover {
-        color: dark-light-diff($tertiary, $secondary, -25%, -25%);
+        color: dark-light-diff($tertiary, $secondary, -25%, -25%) !important;
       }
     }
   }
@@ -366,7 +366,7 @@ body.blog {
               transition: color 0.2s ease;
 
               &:hover {
-                color: $tertiary;
+                color: dark-light-diff($tertiary, $secondary, -25%, -25%);                
               }
             }
           }
