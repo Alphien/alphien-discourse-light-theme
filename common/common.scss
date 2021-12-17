@@ -64,6 +64,7 @@ button, p {
 }
 
 body.blog,
+body.blog-sub-category,
 body.blog-post {
   a {
     text-decoration: none;
@@ -226,7 +227,7 @@ body.blog-post {
   }
 }
 
-body.blog {
+body.blog, body.blog-sub-category {
   padding: 6em 0;
 
   .blog-title {
