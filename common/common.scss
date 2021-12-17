@@ -259,13 +259,13 @@ body.blog {
       }
 
       .topic-list-title {
-        font-size: 22px;
+        font-size: 24px;
         line-height: 30px;
         font-weight: bold;
         margin: 0 0 20px;
       }
 
-      .topic-list {
+      .topic-list, .subcategory-topic-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -313,7 +313,7 @@ body.blog {
               .header {
                 margin: 1.3em 0 0;
                 .topic-title {
-                  font-size: 1.4rem;
+                  font-size: 1.3rem;
                   margin: 0 0 0.4em;
                 }
               }
@@ -371,6 +371,12 @@ body.blog {
             }
           }
         }
+      }
+
+      .separator {
+        margin: 20px 0;
+        border-color: #d7d7d7 !important;
+        border-style: solid !important;
       }
     }
 
