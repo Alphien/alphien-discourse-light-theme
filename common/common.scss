@@ -374,6 +374,20 @@ body.blog, body.blog-sub-category {
         }
       }
 
+      .readmore-category {
+        text-align: center;
+
+        .readmore-link {
+          font-size: 1.1em;
+          color: $tertiary;
+          font-weight: bold;
+
+          &:hover {
+            color: dark-light-diff($tertiary, $secondary, -25%, -25%);
+          }
+        }
+      }
+
       .separator {
         margin: 20px 0;
         border-color: #d7d7d7 !important;
