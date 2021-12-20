@@ -484,7 +484,7 @@ body.blog, body.blog-sub-category {
                 color: $tertiary;
                 transition: color 0.2s ease;
 
-                &:hover {
+                &:hover, &.active {
                   color: dark-light-diff($tertiary, $secondary, -25%, -25%);
                 }
 
