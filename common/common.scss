@@ -393,6 +393,17 @@ body.blog, body.blog-sub-category {
         border-color: #d7d7d7 !important;
         border-style: solid !important;
       }
+
+      .loading-topic-list {
+        display: none;
+        width: 100%;
+        text-align: center;
+
+        &.loading {
+          display: block;
+        }
+      }
+
     }
 
     .side-bar {
