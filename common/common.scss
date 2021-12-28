@@ -672,6 +672,8 @@ body.blog-post {
   pre {
     color: $primary-very-high;
     background: $primary-very-low;
+    width: 100%;
+    overflow: auto;
   }
 
   img.emoji {

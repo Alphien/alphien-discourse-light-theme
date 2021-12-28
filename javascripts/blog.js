@@ -43,7 +43,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   $blog.find(".header-buttons a").each(function() {
     var linkHeader = $(this).attr("href");
-    if (window.location.pathname.search(linkHeader) > -1 && linkHeader !== "/"){
+    if (linkHeader && window.location.pathname.search(linkHeader) > -1 && linkHeader !== "/"){
        $(this).addClass("active");
     }
   });
