@@ -1,15 +1,11 @@
 @import url('https://cdn.alphien.com/fonts.googleapis.com/Open_Sans_300_400_400i_600_700.css');
-@import url('https://cdn.alphien.com/fonts.googleapis.com/Roboto_300_400_400i_700.css');
+@import url('https://cdn.alphien.com/fonts.googleapis.com/PT_serif_400_400i_700.css');
 
 body {
-  font-family: "Open Sans", Roboto, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 0.95rem;
   font-weight: 400;
   background: #f8f8f8;
-}
-
-button, p {
-  font-family: Roboto, "Open Sans", sans-serif;
 }
 
 .topic-list-item:hover {
@@ -328,7 +324,7 @@ body.blog, body.blog-sub-category {
             }
             
             .topic-meta, .topic-tags, .topic-excerpt, .readmore-link {
-              font-family: Roboto, "Open Sans", sans-serif;
+              font-size: 0.9rem;
             }
 
             .topic-meta {
@@ -568,7 +564,7 @@ body.blog-post {
     }
 
     .topic-byline, .topic-tags {
-      font-family: Roboto, "Open Sans", sans-serif;
+      font-size: 0.9rem;
     }
   }
 
@@ -617,13 +613,12 @@ body.blog-post {
       flex-direction: column;
 
       h4 {
-        margin: 1.7em 0 1em;
+        margin: 1em 0;
       }
     }
 
     .comments {
       width: 100%;
-      font-family: Roboto, "Open Sans", sans-serif;
 
       .comment {
         word-wrap: break-word;
@@ -640,6 +635,7 @@ body.blog-post {
           justify-content: space-between;
           align-items: center;
           margin-bottom: 0.4em;
+          font-size: 0.9rem;
 
           .user-container {
             display: flex;
@@ -653,14 +649,19 @@ body.blog-post {
 
             .comment-user {
               margin: 0 0 0 0.7em;
-              font-size: 1em;
-              font-weight: normal;
+              font-weight: bold;
+              font-size: 0.9rem;
             }
           }
 
           .date {
             color: $primary-high;
           }
+        }
+
+        .comment-content {
+          font-family: 'PT Serif', sans-serif;
+          font-size: 1rem;
         }
       }
     }
@@ -715,6 +716,8 @@ body.blog-post {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     width: 100%;
+    font-family: 'PT Serif', sans-serif;
+    font-size: 1rem;
 
     p:last-of-type {
       margin-bottom: 0;
@@ -732,6 +735,8 @@ body.blog-post {
       margin-top: 20px;
       padding-top: 15px;
       border-top: 1px solid $primary-low;
+      font-family: "Open Sans", sans-serif;
+      font-size: 0.95rem;
     }
   }
 }
