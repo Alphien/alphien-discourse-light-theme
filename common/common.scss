@@ -338,13 +338,11 @@ body.blog, body.blog-sub-category {
 
                 .inline-container {
                   margin-top: 6px;
+                }
 
-                  &:nth-child(2) {
-                    .bull {
-                      &:first-child {
-                        display: none;
-                      }
-                    }
+                .meta-container .inline-container:first-child {
+                  .bull:first-child {
+                    display: none;
                   }
                 }
               }
@@ -690,6 +688,7 @@ body.blog-post {
     background: $primary-very-low;
     width: 100%;
     overflow: auto;
+    font-size: 0.95rem;
   }
 
   img.emoji {
