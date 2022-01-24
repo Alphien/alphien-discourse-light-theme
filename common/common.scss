@@ -595,6 +595,21 @@ body.blog-post {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin: 2.5em 0 3em;
+
+    .comment-button {
+      margin: 0;
+      width: 100%;
+      display: flex;
+    
+      a.btn.btn-primary {
+        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.04);
+        border-radius: 3px;
+        cursor: pointer;
+        font-weight: bold;
+        padding: 12px 18px;
+      }
+    }
 
     .comment-heading {
       color: $primary-high;
@@ -602,7 +617,7 @@ body.blog-post {
       flex-direction: column;
 
       h4 {
-        margin: 2.5em 0 1em 0;
+        margin: 1.7em 0 1em;
       }
     }
 
@@ -717,20 +732,6 @@ body.blog-post {
       margin-top: 20px;
       padding-top: 15px;
       border-top: 1px solid $primary-low;
-    }
-  }
-  
-  .comment-footer {
-    margin: 1.7em 0 3em;
-    width: 100%;
-    display: flex;
-  
-    a.btn.btn-primary {
-      box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.04);
-      border-radius: 3px;
-      cursor: pointer;
-      font-weight: bold;
-      padding: 12px 18px;
     }
   }
 }
