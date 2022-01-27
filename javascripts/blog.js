@@ -55,4 +55,35 @@ window.addEventListener("DOMContentLoaded", (event) => {
       $(this).addClass("active");
     }
   });
+
+  $blog.find($blogLikeBtn).on("click", function(e) {
+    if ($(this).hasClass("user")) {
+      const data = {
+        "id": $(this).attr("post-id"),
+        "post_action_type_id": 2,
+        "flag_topic: false": false
+      }
+      $.ajax({
+        type: "POST",
+        url: "/post_actions",
+        data,
+        headers: {
+          "X-CSRF-Token": $("meta[name=csrf-token]").attr("content")
+        },
+        returnXHR: true
+      }).always(function(result) {
+        if (result) {
+          window.location.reload();
+          return false;
+        }
+      });
+    } else {
+      const prod = window.location.host === "forum.alphien.com";
+      if (prod) {
+        window.location.href = "https://auth.alphien.com/?s=" + encodeURIComponent(window.location.href)
+      } else {
+        window.location.href = "https://beta-auth.alphien.com/?s=" + encodeURIComponent(window.location.href)
+      }
+    }
+  });
 });
