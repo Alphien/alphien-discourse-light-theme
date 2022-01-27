@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   var $subscribeModal = $blog.find(".modal.subscribe");
   var $subscribeBtn = $blog.find(".btn-subscribe");
   var $blogSearch = $blog.find("#blog-search");
+  var $blogLikeBtn = $blog.find(".btn-like").not('.liked');
 
   $blog.find($subscribeBtn).on("click", function(e) {
     if ($(this).hasClass("user")) {
