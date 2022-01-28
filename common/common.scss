@@ -1,11 +1,12 @@
 @import url('https://cdn.alphien.com/fonts.googleapis.com/Open_Sans_300_400_400i_600_700.css');
-@import url('https://cdn.alphien.com/fonts.googleapis.com/PT_Serif_400_400i_700.css');
+@import url('https://cdn.alphien.com/fonts.googleapis.com/PT_Serif_400_400i.css');
 
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 0.95rem;
   font-weight: 400;
   background: #f8f8f8;
+  -webkit-font-smoothing: antialiased;
 }
 
 .topic-list-item:hover {
@@ -350,7 +351,6 @@ body.blog, body.blog-sub-category {
               margin: 0.7em 0 0.4em;
               color: $primary-high;
               line-height: 17px;
-              word-spacing: 0.2em;
             }
             
             .topic-meta, .topic-tags, .topic-excerpt, .readmore-link {
@@ -568,7 +568,7 @@ body.blog-post {
     max-height: 400px;
     justify-content: flex-end;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 20px;
 
     .contents {
       width: 100%;
@@ -586,7 +586,7 @@ body.blog-post {
 
     .title {
       color: $primary;
-      font-size: 1.6em;
+      font-size: 32px;
       font-weight: 700;
       margin: 0 0 0.6em 0;
     }
@@ -600,7 +600,7 @@ body.blog-post {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 20px;
   }
 
   li {
@@ -689,7 +689,8 @@ body.blog-post {
 
         .comment-content {
           font-family: 'PT Serif', sans-serif;
-          font-size: 1rem;
+          font-size: 18px;
+          line-height: 28px;
         }
       }
     }
@@ -718,7 +719,7 @@ body.blog-post {
     background: $primary-very-low;
     width: 100%;
     overflow: auto;
-    font-size: 0.95rem;
+    // font-size: 0.95rem;
   }
 
   img.emoji {
@@ -739,14 +740,14 @@ body.blog-post {
 
   .post-content {
     padding-top: 1em;
-    word-spacing: 0.2em;
     display: flex;
     flex-direction: column;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     width: 100%;
     font-family: 'PT Serif', sans-serif;
-    font-size: 1rem;
+    font-size: 20px;
+    line-height: 33px;
 
     p:last-of-type {
       margin-bottom: 0;
@@ -765,7 +766,7 @@ body.blog-post {
       padding-top: 15px;
       border-top: 1px solid $primary-low;
       font-family: "Open Sans", sans-serif;
-      font-size: 0.95rem;
+      font-size: 1.1rem;
     }
   }
 }
