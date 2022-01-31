@@ -354,7 +354,7 @@ body.blog, body.blog-sub-category {
             }
             
             .topic-meta, .topic-tags, .topic-excerpt, .readmore-link {
-              font-size: 0.9rem;
+              font-size: 1em;
             }
 
             .topic-meta {
@@ -592,7 +592,7 @@ body.blog-post {
     }
 
     .topic-byline, .topic-tags {
-      font-size: 0.9rem;
+      font-size: 1em;
     }
   }
 
@@ -663,7 +663,7 @@ body.blog-post {
           justify-content: space-between;
           align-items: center;
           margin-bottom: 0.4em;
-          font-size: 0.9rem;
+          font-size: 1em;
 
           .user-container {
             display: flex;
@@ -678,7 +678,7 @@ body.blog-post {
             .comment-user {
               margin: 0 0 0 0.7em;
               font-weight: bold;
-              font-size: 0.9rem;
+              font-size: 1em;
             }
           }
 

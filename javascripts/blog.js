@@ -4,12 +4,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
   var $subscribeBtn = $blog.find(".btn-subscribe");
   var $blogSearch = $blog.find("#blog-search");
   var $blogLikeBtn = $blog.find(".btn-like").not('.liked');
+  var prod = window.location.host === "forum.alphien.com";
 
   $blog.find($subscribeBtn).on("click", function(e) {
     if ($(this).hasClass("user")) {
       $subscribeModal.addClass("active");
     } else {
-      window.location.href = "/login"
+      if (prod) {
+        window.location.href = "https://auth.alphien.com/?s=" + encodeURIComponent(window.location.href);
+      } else {
+        window.location.href = "https://beta-auth.alphien.com/?s=" + encodeURIComponent(window.location.href);
+      }
     }
   });
 
@@ -34,7 +39,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     e.preventDefault()
     var searchValue = $blogSearch.find("input").val();
     if (searchValue !== "") {
-      var url = new URL(location.href)
+      var url = new URL(location.href);
       var search_params = url.searchParams;
       search_params.set("q", searchValue);
       url.search = search_params.toString();
@@ -71,14 +76,24 @@ window.addEventListener("DOMContentLoaded", (event) => {
           "X-CSRF-Token": $("meta[name=csrf-token]").attr("content")
         },
         returnXHR: true
-      }).always(function(result) {
-        if (result) {
-          window.location.reload();
-          return false;
+      })
+      .done(function() {
+        $blogLikeBtn.addClass("liked");
+        $blogLikeBtn.removeClass("user");
+        $blogLikeBtn.attr("title", "you already liked this post");
+        $blogLikeBtn.find("span").text("Liked");
+        $blog.find($blogLikeBtn).off('click');
+        const $likeValue = $blog.find(".like-meta-value");
+        if ($likeValue) {
+          const currentValue = parseInt($likeValue.text());
+          const newValue = currentValue + 1;
+          $likeValue.text(newValue);
         }
-      });
+      })
+      .fail(function() {
+        $(".comment-button").after("<div style='color: #dd1144; margin-top: 5px;'>failed to like post</div>")
+      })
     } else {
-      const prod = window.location.host === "forum.alphien.com";
       if (prod) {
         window.location.href = "https://auth.alphien.com/?s=" + encodeURIComponent(window.location.href)
       } else {
