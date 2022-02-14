@@ -498,8 +498,10 @@ body.blog, body.blog-sub-category {
         }
 
         .tag-container {
+          margin-bottom: 1.5em;
+          
           .tag-title {
-            margin: 0 0 1em;
+            margin: 0 0 0.5em;
           }
 
           ul, li {
@@ -511,6 +513,7 @@ body.blog, body.blog-sub-category {
           }
 
           .tag-list {
+            margin-bottom: 1.2em;
             li {
               margin-bottom: 8px;
 
