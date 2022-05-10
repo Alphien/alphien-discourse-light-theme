@@ -66,7 +66,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       const data = {
         "id": $(this).attr("post-id"),
         "post_action_type_id": 2,
-        "flag_topic: false": false
+        "flag_topic": false
       }
       $.ajax({
         type: "POST",
