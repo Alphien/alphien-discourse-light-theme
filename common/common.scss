@@ -772,5 +772,10 @@ body.blog-post {
       font-family: "Open Sans", sans-serif;
       font-size: 1.1rem;
     }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 }
