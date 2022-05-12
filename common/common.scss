@@ -226,6 +226,7 @@ body.blog-post {
     margin-top: 0.7em;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     .tag-icon {
       color: $primary-high;
